@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Productivity Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ===== NAV ===== */
+
+header{
+    background:#167c80;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+header h1{
+    font-size:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+nav a.contact{
+    border:2px solid #ffc107;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    background:#167c80;
+    color:white;
+    padding:120px 8%;
+    position:relative;
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:30px;
+    font-size:18px;
+}
+TaskEngine
+.btn{
+    background:white;
+    color:#167c80;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    display:inline-block;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    bottom:-80px;
+    left:0;
+    width:100%;
+    height:150px;
+    background:#f4f6f9;
+    transform:skewY(-4deg);
+}
+
+/* ===== ABOUT ===== */
+
+.about{
+    padding:150px 8% 80px 8%;
+    text-align:center;
+}TaskEngine
+
+.about h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.highlight{
+    color:#ffc107;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    color:#555;
+}
+
+/* ===== FEATURES ===== */
+
+.features{
+    background:#e9edf2;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.features h3{
+    margin-bottom:50px;
+    font-size:26px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    text-align:left;
+}
+
+.card h4{
+    margin-bottom:10px;
+}
+
+/* ===== TESTIMONIAL ===== */
+
+.testimonial{
+    padding:100px 8%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:50px;
+}
+
+.testimonial-circle{
+    width:220px;
+    height:220px;
+    background:#ffc107;
+    border-radius:50%;
+}
+
+.testimonial-text{
+    max-width:600px;
+}
+
+.testimonial-text p{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+/* ===== CTA ===== */
+
+.cta{
+    background:#111827;
+    color:white;
+    padding:80px 8%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.cta h3{
+    font-size:28px;
+}
+
+.cta span{
+    color:#ffc107;
+}
+
+.footer-bottom{
+    background:#0b1120;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+    .hero h2{
+        font-size:32px;
+    }
+
+    .testimonial{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cta{
+        flex-direction:column;
+        gap:30px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>TaskEngine</h1>
+    <nav>
+        <a href="#">Features</a>
+        <a href="#">How It Works</a>
+        <a href="#">Blog</a>
+        <a href="#" class="contact">Join Beta</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>We are ready for your academic success</h2>
+        <p>The smart productivity dashboard designed for university students managing deadlines, exams, and group projects.</p>
+        <a href="#" class="btn">Let’s organise your semester</a>
+    </div>
+</section>
+
+<section class="about">
+    <h3>The best <span class="highlight">Student Productivity</span> tool for modern universities</h3>
+    <p>
+        Built specifically for students, TaskEngine helps you visualise workload,
+        manage group projects, and avoid lasTaskEnginet-minute panic.
+        Finally — a dashboard made for university life.
+    </p>
+</section>
+
+<section class="features">
+    <h3>Featured Productivity Tools</h3>
+    <div class="feature-grid">
+        <div class="card">
+            <h4>Smart Deadline Tracker</h4>
+            <p>Track coursework across all modules in one unified timeline.</p>
+        </div>
+        <div class="card">
+            <h4>Workload Heatmap</h4>
+            <p>Instantly see your busiest weeks and plan ahead.</p>
+        </div>
+        <div class="card">
+            <h4>Group Collaboration</h4>
+            <p>Assign tasks and monitor progress inside your project team.</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial">
+    <div class="testimonial-circle"></div>
+    <div class="testimonial-text">
+        <p>
+            “This would have saved me in second year. I could finally see all my deadlines clearly.”
+        </p>
+        <strong>— University Business Student</strong>
+    </div>
+</section>
+
+<section class="cta">
+    <h3>We build productive <span>students</span>.</h3>
+    <div>
+        <p>Email: hello@taskengine.com</p>
+        <p>RGU Startup Project 2026</p>
+    </div>
+</section>
+
+<div class="footer-bottom">
+    © 2026 TaskEngine | Built for IT Entrepreneurship Coursework
+</div>
+
+</body>
+</html>
