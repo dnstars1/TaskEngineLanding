@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Productivity Dashboard</title>
+<title>TaskEngine | Student Productivity Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
 
+<style>
 *{
     margin:0;
     padding:0;
@@ -69,7 +69,7 @@ nav a.contact{
     margin-bottom:30px;
     font-size:18px;
 }
-TaskEngine
+
 .btn{
     background:white;
     color:#167c80;
@@ -78,6 +78,12 @@ TaskEngine
     text-decoration:none;
     font-weight:600;
     display:inline-block;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ffc107;
+    color:#333;
 }
 
 .hero::after{
@@ -96,7 +102,7 @@ TaskEngine
 .about{
     padding:150px 8% 80px 8%;
     text-align:center;
-}TaskEngine
+}
 
 .about h3{
     font-size:28px;
@@ -138,6 +144,11 @@ TaskEngine
     border-radius:12px;
     box-shadow:0 5px 20px rgba(0,0,0,0.05);
     text-align:left;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card h4{
@@ -212,9 +223,89 @@ TaskEngine
         gap:30px;
     }
 }
-
 </style>
 </head>
+
+<!-- GDPR Modal -->
+<div id="consentModal" class="modal">
+  <div class="modal-content">
+    <h3>Beta Access Consent</h3>
+    <p>
+      By submitting this form, you agree to be contacted about early access to TaskEngine.
+      Your data will be stored securely and not shared with third parties.
+    </p>
+    <div class="modal-buttons">
+      <button onclick="continueToForm()">I Agree & Continue</button>
+      <button onclick="closeModal()" class="secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    max-width:450px;
+    text-align:center;
+}
+
+.modal-content h3{
+    margin-bottom:15px;
+}
+
+.modal-content p{
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.modal-buttons button{
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    margin:5px;
+}
+
+.modal-buttons button:first-child{
+    background:#167c80;
+    color:white;
+}
+
+.modal-buttons .secondary{
+    background:#ddd;
+}
+</style>
+
+<script>
+function openModal(){
+    document.getElementById("consentModal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("consentModal").style.display = "none";
+}
+
+function continueToForm(){
+    window.open("https://forms.cloud.microsoft/e/PPZKFFzmYy", "_blank");
+    closeModal();
+}
+</script>
+
 <body>
 
 <header>
@@ -223,7 +314,7 @@ TaskEngine
         <a href="#">Features</a>
         <a href="#">How It Works</a>
         <a href="#">Blog</a>
-        <a href="#" class="contact">Join Beta</a>
+        <a href="#" class="contact" onclick="openModal()">Join Beta</a>
     </nav>
 </header>
 
@@ -231,7 +322,7 @@ TaskEngine
     <div class="hero-content">
         <h2>We are ready for your academic success</h2>
         <p>The smart productivity dashboard designed for university students managing deadlines, exams, and group projects.</p>
-        <a href="#" class="btn">Let’s organise your semester</a>
+        <a href="#" class="btn" onclick="openModal()">Join Beta</a>
     </div>
 </section>
 
@@ -239,7 +330,7 @@ TaskEngine
     <h3>The best <span class="highlight">Student Productivity</span> tool for modern universities</h3>
     <p>
         Built specifically for students, TaskEngine helps you visualise workload,
-        manage group projects, and avoid lasTaskEnginet-minute panic.
+        manage group projects, and avoid last-minute panic.
         Finally — a dashboard made for university life.
     </p>
 </section>
@@ -281,7 +372,7 @@ TaskEngine
 </section>
 
 <div class="footer-bottom">
-    © 2026 TaskEngine | Built for IT Entrepreneurship Coursework
+    © 2026 TaskEngine | Built for Pirate Studies Coursework
 </div>
 
 </body>
